@@ -1,15 +1,12 @@
 console.log("ここにコードを追加します。");
 
 class Department {
-  name: string;
   employees: string[] = [];
 
-  constructor(n: string) {
-    this.name = n;
-  }
+  constructor(private readonly id: string, public name: string) {}
 
   describe(this: Department) {
-    console.log("Department: " + this.name);
+    console.log(`Department (${this.id}): ${this.name}`);
   }
 
   addEmployee(employee: string) {
@@ -21,14 +18,16 @@ class Department {
     console.log(this.employees);
   }
 }
-const accounting = new Department("Accounting");
+const accounting = new Department("0", "Accounting");
 
 accounting.describe();
 
-const copyDepartment = {
-  describe: accounting.describe,
-};
+accounting.addEmployee("Max");
+accounting.addEmployee("Manu");
+accounting.printEmployeeInformation();
+
+// const copyDepartment = {
+//   describe: accounting.describe,
+// };
 
 // copyDepartment.describe(); //! ここでエラーが発生する
-
-console.log(accounting);
