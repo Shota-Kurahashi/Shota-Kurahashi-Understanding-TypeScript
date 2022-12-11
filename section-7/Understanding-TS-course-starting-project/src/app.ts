@@ -107,3 +107,5 @@ function createCourseGoal(
 //* 読み取り専用
 const namess: Readonly<string[]> = ["Max", "Anna"];
 // namess.push("Manu");
+
+// 全体で型を固定して置きたい場合はGenericsを使う
