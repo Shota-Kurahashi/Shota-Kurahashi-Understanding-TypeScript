@@ -29,6 +29,10 @@ type Numeric = number | boolean;
 
 type Universal = Combinable & Numeric; //? ２つの型を組み合わせる
 
+function add(a: string, b: string): string;
+function add(a: number, b: string): string;
+function add(a: string, b: number): string;
+function add(a: number, b: number): number;
 function add(a: Combinable, b: Combinable) {
   if (typeof a === "string" || typeof b === "string") {
     return a.toString() + b.toString();
@@ -36,6 +40,21 @@ function add(a: Combinable, b: Combinable) {
 
   return a + b;
 }
+
+const result = add("Hello", "Typescript");
+
+const fetchedUserData = {
+  id: "u1",
+  name: "Max",
+  job: { title: "CEO", description: "My own company" },
+};
+
+console.log(fetchedUserData?.job?.title);
+
+const userInput = null;
+
+// null と undefined は、後ろのものが優先される -> nullish coalescing
+const storedData = userInput ?? "DEFAULT";
 
 type UnknownEmployee = Employee | Admin;
 
@@ -120,3 +139,16 @@ const userElementInput = document.getElementById("user-input");
 
 if (userElementInput)
   (userElementInput as HTMLInputElement).value = "こんにちは！";
+
+//* index型
+
+interface ErrorContainer {
+  // { email: '正しいメールアドレスではありません', username: 'ユーザー名に記号を含めることはできません }
+
+  [prop: string]: string;
+}
+
+const errorBag: ErrorContainer = {
+  email: "正しいメールアドレスではありません",
+  username: "ユーザー名に記号を含めることはできません",
+};
