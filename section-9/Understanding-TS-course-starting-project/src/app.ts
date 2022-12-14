@@ -211,7 +211,6 @@ class ProjectItem
 
     this.configure();
     this.renderContent();
-    console.log("a");
   }
 
   @AutoBind
