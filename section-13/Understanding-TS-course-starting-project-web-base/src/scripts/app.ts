@@ -4,7 +4,7 @@ import "../styles/style.scss";
 
 const form = document.querySelector("form") as HTMLFormElement;
 const addressInput = document.querySelector("#address") as HTMLInputElement;
-const GOOGLE_API_KEY = "AIzaSyBFKcgCw0Z7LISkpeaF-T8gqcrYg4J3XD8";
+const GOOGLE_API_KEY = "API_KEY";
 
 type GoogleGeocodingResponse = {
   results: {
