@@ -47,5 +47,9 @@
   },
   "browserslist": [
     "> 0.2% and not dead"
-  ]
+  ],
+  "dependencies": {
+    "@types/google.maps": "^3.51.0",
+    "axios": "^1.2.1"
+  }
 }

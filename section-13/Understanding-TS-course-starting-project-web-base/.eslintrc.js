@@ -77,7 +77,11 @@ module.exports = {
     "import/prefer-default-export": "off",
     "unused-imports/no-unused-imports": "error",
     "no-new": "off",
+    "no-console": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
   },
+
   settings: {
     "import/resolver": {
       // importするファイルをjsだけではなく、tsを含むファイルを許可する
