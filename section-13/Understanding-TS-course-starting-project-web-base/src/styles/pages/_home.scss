@@ -1,1 +1,31 @@
 @use "../global" as *;
+
+#map {
+  width: 90%;
+  height: 20rem;
+  border: 1px solid black;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  text-align: center;
+  margin: 2rem auto;
+
+  &__input {
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+  }
+
+  &__button {
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
